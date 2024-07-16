@@ -1,0 +1,25 @@
+Problem link: https://www.geeksforgeeks.org/problems/find-index4752/1?page=1&category=Arrays&difficulty=School&sortBy=submissions
+
+class Solution {
+    // Function to find starting and end index
+    static int[] findIndex(int arr[], int key) {
+        // code here.
+        int[] out = new int[2];
+        out[0] =-1;
+        out[1] = -1;
+        int count=0;
+        for(int i=0; i<arr.length; i++){
+            if(arr[i] == key){
+                if(count ==0){
+                    out[0] = i;
+                    out[1] = i;
+                    count++;
+                }
+                else{
+                    out[1] = i;
+                }
+            }
+        }
+        return out;
+    }
+}
