@@ -1,0 +1,14 @@
+Problem link: https://www.geeksforgeeks.org/problems/print-the-left-element2009/1?page=1&category=Arrays&difficulty=School&sortBy=submissions
+
+class Solution {
+    
+    public long leftElement(long arr[], long n)
+    {
+        Arrays.sort(arr);
+        int index = (int)(n/2);
+        if(n%2==0){
+            index--;
+        }
+        return arr[index];
+    }
+}
