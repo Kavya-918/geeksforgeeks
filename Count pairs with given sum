@@ -1,0 +1,16 @@
+Problem link: https://www.geeksforgeeks.org/problems/count-pairs-with-given-sum5022/1?page=1&category=Arrays&sortBy=submissions
+
+class Solution {
+    int getPairsCount(int[] arr, int sum) {
+        HashMap<Integer,Integer>map = new HashMap<>();
+        int count=0;
+        for(int num:arr){
+            if(map.containsKey(sum-num)){
+                count +=map.get(sum-num);
+            }
+            map.put(num,map.getOrDefault(num,0)+1);
+        }
+        return count;
+        
+    }
+}
